@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Github, LinkedIn, Mail } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import Button from './ui/Button'
 import { personalInfo } from '../data/portfolio'
 
@@ -131,7 +131,7 @@ export default function Hero() {
             whileHover={{ y: -3, color: '#fbbf24' }}
             className="text-gray-400 transition-colors"
           >
-            <LinkedIn size={28} />
+            <Linkedin size={28} />
           </motion.a>
         </motion.div>
       </div>
