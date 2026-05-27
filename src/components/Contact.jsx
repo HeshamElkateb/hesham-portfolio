@@ -7,6 +7,8 @@ import Card from './ui/Card'
 import Button from './ui/Button'
 import { personalInfo } from '../data/portfolio'
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [sending, setSending] = useState(false)
@@ -15,10 +17,27 @@ export default function Contact() {
     e.preventDefault()
     setSending(true)
 
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        })
+      })
 
-    toast.success('Message sent successfully!')
-    setFormData({ name: '', email: '', message: '' })
+      if (response.ok) {
+        toast.success('Message sent successfully!')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        toast.error('Failed to send message. Please try again.')
+      }
+    } catch (error) {
+      toast.error('Failed to send message. Please try again.')
+    }
+
     setSending(false)
   }
 
