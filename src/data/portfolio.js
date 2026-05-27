@@ -4,7 +4,7 @@ export const personalInfo = {
   location: "Cairo, Egypt",
   email: "hesham.amr.elkateb@gmail.com",
   linkedin: "https://linkedin.com/in/hesham-elkateb-a18318386",
-  github: "https://github.com/hesham-elkateb",
+  github: "https://github.com/heshamelkateb",
 };
 
 export const about = {

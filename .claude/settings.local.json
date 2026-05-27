@@ -13,7 +13,15 @@
       "Bash(where node *)",
       "Skill(superpowers:finishing-a-development-branch)",
       "Bash(git merge-base *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(git push *)",
+      "Bash(gh auth *)",
+      "Bash(curl *)",
+      "Bash(where git *)",
+      "Bash(git remote *)",
+      "Bash(git fetch *)",
+      "Bash(gh run *)",
+      "WebFetch(domain:api.github.com)"
     ]
   }
 }
