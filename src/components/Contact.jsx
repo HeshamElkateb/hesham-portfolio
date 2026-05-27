@@ -7,7 +7,7 @@ import Card from './ui/Card'
 import Button from './ui/Button'
 import { personalInfo } from '../data/portfolio'
 
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwvzarkz'
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
