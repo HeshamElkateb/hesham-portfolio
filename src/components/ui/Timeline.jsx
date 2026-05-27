@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export default function Timeline({ children }) {
+export function Timeline({ children }) {
   return (
     <div className="relative">
       <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold-500/50 to-transparent" />
